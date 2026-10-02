@@ -14,6 +14,7 @@ Q. What will the colors represent in the tree, or can we choose any colors what 
 ColorPrinter.java, ColorPrinter object appears to how to color appears in the termial, if to reset to a default color or currentColor(the desired color wanted). What is deteriming the color output?? The User in the termial with a scanner? ColorPrinterTest.java: Tests if the print statment is the desired output, and does it reset, I should test if the Color doesnt not want to reset, does it have the correct color and does it maintaian the same color.
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
+TruffulaOptions Object holds the behavior on what is displayed, what's being displayed root file and sub root files, if we want to print out the hidden files or not, and if we need to show use color or not color. TruffulaOptionsTest test what and how its being displayed. The test seems mimnial. We need a test when we only have the path ['/path/to/directory'] and nothing else to see if its not showing hidden files and it if it shows color by default. And also test if we mess with the order it should still behave as intended becuase order DOES NOT matter ['-nc', '-h'] or ['-h', '-nc'].
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
 
