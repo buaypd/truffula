@@ -17,5 +17,6 @@ ColorPrinter.java, ColorPrinter object appears to how to color appears in the te
 TruffulaOptions Object holds the behavior on what is displayed, what's being displayed root file and sub root files, if we want to print out the hidden files or not, and if we need to show use color or not color. TruffulaOptionsTest test what and how its being displayed. The test seems mimnial. We need a test when we only have the path ['/path/to/directory'] and nothing else to see if its not showing hidden files and it if it shows color by default. And also test if we mess with the order it should still behave as intended becuase order DOES NOT matter ['-nc', '-h'] or ['-h', '-nc'].
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
+TruffulaPrinter uses the TruffulaOptions class to help deterime out the tree(files) is printed and the Conslosecolor and colorPrinter for the desired color. Seems like this is where we delare the tree structure for the files and what order it prints into the console  
 
 ## AlphabeticalFileSorter.java
