@@ -7,6 +7,8 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 App.java uses the TruffulaOptions Object and the other classes, specific options based on the behavior is needed. Looks like i would need to use a scanner to deterimine the output.
 
 ## ConsoleColor.java
+This class holds all the color we need to identify the files. 
+Q. What will the colors represent in the tree, or can we choose any colors what want to represent our tree.
 
 ## ColorPrinter.java / ColorPrinterTest.java
 
