@@ -11,6 +11,7 @@ This class holds all the color we need to identify the files.
 Q. What will the colors represent in the tree, or can we choose any colors what want to represent our tree.
 
 ## ColorPrinter.java / ColorPrinterTest.java
+ColorPrinter.java, ColorPrinter object appears to how to color appears in the termial, if to reset to a default color or currentColor(the desired color wanted). What is deteriming the color output?? The User in the termial with a scanner? ColorPrinterTest.java: Tests if the print statment is the desired output, and does it reset, I should test if the Color doesnt not want to reset, does it have the correct color and does it maintaian the same color.
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
 
