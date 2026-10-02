@@ -20,3 +20,4 @@ TruffulaOptions Object holds the behavior on what is displayed, what's being dis
 TruffulaPrinter uses the TruffulaOptions class to help deterime out the tree(files) is printed and the Conslosecolor and colorPrinter for the desired color. Seems like this is where we delare the tree structure for the files and what order it prints into the console  
 
 ## AlphabeticalFileSorter.java
+Sorts the files in Alphabetical order. I should also test for numbers as well, There is no test for AlphabeticalFileSorter.java. I should consider adding one
