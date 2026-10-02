@@ -4,6 +4,7 @@ As part of Wave 0, please fill out notes for each of the below files. They are i
 PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 
 ## App.java
+App.java uses the TruffulaOptions Object and the other classes, specific options based on the behavior is needed. Looks like i would need to use a scanner to deterimine the output.
 
 ## ConsoleColor.java
 
