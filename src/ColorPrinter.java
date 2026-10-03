@@ -87,6 +87,12 @@ public class ColorPrinter {
    */
   public void print(String message, boolean reset) {
     // TODO: Implement this!
+    printStream.print(currentColor + message);
+      if (reset) {
+       printStream.print(ConsoleColor.RESET);
+       currentColor = ConsoleColor.RESET;
+      }
+    
   }
 
   /**
@@ -109,4 +115,9 @@ public class ColorPrinter {
     this.printStream = printStream;
     this.currentColor = color;
   }
+  public static void main(String[] args) {
+    
+  }
 }
+
+
