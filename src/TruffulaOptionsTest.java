@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,4 +27,59 @@ public class TruffulaOptionsTest {
     assertTrue(options.isShowHidden());
     assertFalse(options.isUseColor());
   }
+
+ @Test
+  void testValidDirectoryDifferntOrder(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File directory = new File(tempDir, "subfolder");
+    directory.mkdir();
+    String directoryPath = directory.getAbsolutePath();
+    String[] args = {"-h", "-nc", directoryPath};
+
+    // Act: Create TruffulaOptions instance
+    TruffulaOptions options = new TruffulaOptions(args);
+
+    // Assert: Check that the root directory is set correctly
+    assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
+    assertTrue(options.isShowHidden());
+    assertFalse(options.isUseColor());
+  }
+
+  @Test
+  void testValidDirectoryOnlyPathIsPassed(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File directory = new File(tempDir, "subfolder");
+    directory.mkdir();
+    String directoryPath = directory.getAbsolutePath();
+    String[] args = {directoryPath};
+
+    // Act: Create TruffulaOptions instance
+    TruffulaOptions options = new TruffulaOptions(args);
+
+    // Assert: Check that the root directory is set correctly
+    assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
+    assertFalse(options.isShowHidden());
+    assertTrue(options.isUseColor());
+  }
+  @Test
+  void testMissingDirectoryThrows(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange:
+  
+    String[] args = {"-h", "-nc"};
+
+    // Act: 
+    
+
+    // Assert: 
+    assertThrows(FileNotFoundException.class, () -> new TruffulaOptions(args));
+  }
+    @Test
+  void testEmptyArgsThrows(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange:
+    String[] args = {};
+    // Act: 
+    // Assert: 
+    assertThrows(IllegalArgumentException.class, () -> new TruffulaOptions(args));
+  }
 }
+
